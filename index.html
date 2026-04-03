@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio - Hernande Monteiro</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Hernande Monteiro - Uninter</h1>
+      <nav>
+        <ul>
+          <li><a href="#sobre">Sobre Mim</a></li>
+          <li><a href="#formacao">Formação</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="sections">
+      <section id="sobre">
+        <h2>Sobre Mim</h2>
+        <p>
+          Olá!
+          <br />
+          Me chamo Hernande Monteiro e sou um estudante de Ciência da Computação
+          na Uninter.
+          <br />
+          Tenho uma paixão por tecnologia e desenvolvimento de software, e estou
+          sempre buscando aprender novas habilidades e aprimorar meus
+          conhecimentos.
+          <br />
+          Trabalho com desenvolvimento web desde 2019, atuando como full-stack
+          developer, atualmente faço parte da equipe de desenvolvedores do Banco
+          do Brasil, time qual comecei atuar ao adentrar no último concurso.
+          <br />
+          Estou cursando ciência da computação para ter uma melhor base em
+          assuntos da área, com esses conteúdos posso melhorar meu dia a dia e
+          conseguir promoções na carreira com a formação, conteúdos voltados a
+          matemática e Machine Learning são meus preferidos, sendo meu foco para
+          o futuro.
+        </p>
+      </section>
+      <section id="formacao">
+        <h2>Formação</h2>
+        <ul>
+          <li>
+            Técnico em Gastronomia - Espaço Gourmet - Escola de Gastronomia
+            (2019)
+          </li>
+          <li>Bacharel em Ciência da Computação - Uninter (2023-Atualmente)</li>
+          <li>Curso de Desenvolvimento Web - Udemy (2022)</li>
+          <li>Curso de React - Coursera (2023)</li>
+          <li>Curso de Node.js - Codecademy (2023)</li>
+          <li>Google Digital Leader (2025)</li>
+          <li>MongoDB Developer Certified (nodejs) (2025)</li>
+        </ul>
+      </section>
+      <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="projeto">
+          <h3>Projeto 1: Portfólio Pessoal - Desatualizado</h3>
+          <p>
+            Desenvolvi um site de portfólio para mostrar meus trabalhos e
+            habilidades como desenvolvedor. O site é responsivo e foi construído
+            usando NextJS, Tailwind CSS e TypeScript.
+            <br />
+            <a href="https://hernandemonteiro.vercel.app/" target="_blank"
+              >Acesse meu portfólio pessoal</a
+            >
+          </p>
+        </div>
+        <div class="projeto">
+          <h3>Projeto 2: Jogo -> Secret Word Game</h3>
+          <p class="ProjectModal_contentModal__q4KoQ">
+            Jogo chamado Secret Word, que tem como objetivo testar as
+            habilidades de vocabulário e pensamento rápido dos jogadores. Este
+            projeto foi criado para demonstrar minhas habilidades em React,
+            Typescript e Sass.<br /><br />Neste projeto, fui responsável pelo
+            design e desenvolvimento do jogo Secret Word. Isso incluiu a criação
+            da lógica do jogo, a implementação dos recursos de dicas e a
+            programação dos algoritmos necessários para garantir que o jogo
+            funcione corretamente.<br /><br />Este projeto me permitiu treinar
+            um pouco sobre programação enquanto criei um jogo engraçado para
+            meus sobrinhos jogarem.
+            <br />
+            <a
+              href="https://github.com/hernandemonteiro/secret_word"
+              target="_blank"
+              >Acesse o código fonte aqui</a
+            >
+          </p>
+        </div>
+        <div class="projeto">
+          <h3>Projeto 3: Aplicativo de Tarefas</h3>
+          <p>
+            Criei um aplicativo de tarefas para ajudar as pessoas a organizarem
+            suas atividades diárias. O aplicativo é construído com React e
+            possui uma interface intuitiva.
+          </p>
+        </div>
+      </section>
+      <div id="success" class="hidden">
+        <p>Mensagem enviada com sucesso!</p>
+      </div>
+      <section id="contato">
+        <h2>Contato</h2>
+        <form id="contact-form">
+          <label for="name">Nome:</label>
+          <input type="text" id="name" name="name" required />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <label for="message">Mensagem:</label>
+          <textarea id="message" name="message" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

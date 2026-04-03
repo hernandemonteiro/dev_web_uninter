@@ -1,0 +1,237 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --header-offset: 110px;
+  --bg: #f3f5f9;
+  --surface: #ffffff;
+  --text: #1f2937;
+  --muted: #4b5563;
+  --brand: #0f4c81;
+  --brand-strong: #0b3d68;
+  --line: #e5e7eb;
+  --radius: 14px;
+  --shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+}
+
+html {
+  scroll-padding-top: var(--header-offset);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", "Trebuchet MS", sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: radial-gradient(circle at top, #ffffff, var(--bg) 45%);
+  padding-top: var(
+    --header-offset
+  ); /* Para evitar que o conteúdo fique escondido atrás do header fixo */
+}
+
+header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(11, 61, 104, 0.9);
+  color: #f8fafc;
+  padding: 16px 28px;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 18px rgba(11, 61, 104, 0.25);
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+  letter-spacing: 0.3px;
+}
+
+nav ul {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  display: block;
+  color: #eff6ff;
+  text-align: center;
+  padding: 10px 14px;
+  text-decoration: none;
+  border-radius: 999px;
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+  transform: translateY(-1px);
+}
+
+section {
+  padding: 20px;
+  scroll-margin-top: var(--header-offset);
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+#sections {
+  display: flex;
+  flex-direction: column;
+  gap: 130px;
+  align-items: center;
+  padding: 40px 0 56px;
+}
+
+#sections section {
+  width: 90%;
+  max-width: 940px;
+  text-align: center;
+  padding: 3.2%;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background-color: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+#sections h2 {
+  margin-bottom: 12px;
+  color: var(--brand);
+}
+
+#sections p,
+#sections li {
+  color: var(--muted);
+}
+
+.projeto {
+  margin-top: 18px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fbfdff;
+}
+
+.projeto h3 {
+  color: var(--brand-strong);
+  margin-bottom: 8px;
+}
+
+section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+section ul li + li {
+  margin-top: 8px;
+}
+
+#contato form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+#contato form label {
+  font-weight: bold;
+  text-align: left;
+}
+
+#contato form input,
+#contato form textarea {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font: inherit;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+#contato form input:focus,
+#contato form textarea:focus {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px rgba(15, 76, 129, 0.12);
+}
+
+#contato form button {
+  padding: 12px;
+  background: linear-gradient(135deg, var(--brand), var(--brand-strong));
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease;
+}
+
+#contato form button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.06);
+}
+
+#success {
+  width: 90%;
+  max-width: 940px;
+  text-align: center;
+  padding: 20px;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 4px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    --header-offset: 150px;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 12px;
+    padding: 14px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #sections {
+    padding-top: 26px;
+  }
+
+  #sections section {
+    width: 94%;
+    padding: 5%;
+  }
+}
